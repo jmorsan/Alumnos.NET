@@ -123,6 +123,8 @@ namespace Alumnos
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked == true) this.notasTableAdapter.FillBy(this.evaluaDataSet3.Notas, "%", comboBox1.SelectedValue.ToString());
+            else this.notasTableAdapter.FillBy(this.evaluaDataSet3.Notas, listBox1.SelectedValue.ToString(), comboBox1.SelectedValue.ToString());
             panel1.Visible = false;
             panel2.Visible = true;
         }
@@ -142,7 +144,18 @@ namespace Alumnos
 
         }
 
-   
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.notasTableAdapter.Update(this.evaluaDataSet3.Notas);
+            panel1.Visible = true;
+            panel2.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            panel2.Visible = false;
+        }
     }
 
     internal class ComboboxItem

@@ -66,6 +66,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>evaluaDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="evaluaDataSet3.cs">
+      <DependentUpon>evaluaDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="evaluaDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -161,7 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="evalua.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
